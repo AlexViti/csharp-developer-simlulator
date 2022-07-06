@@ -46,7 +46,7 @@ for (int i = index; !closingApp && i < clientActivities.Length; i++)
     if (!File.ReadAllLines(dAPath).Contains(clientActivities[i]))
     {
         Thread.Sleep(new Random().Next(5000, 10000));
-        closingApp = new Random().NextDouble() > 0.9;
+        //closingApp = new Random().NextDouble() > 0.9;
         StreamWriter developerActivities = new StreamWriter(dAPath, true);
         developerActivities.WriteLine(clientActivities[i]);
         developerActivities.Close();
